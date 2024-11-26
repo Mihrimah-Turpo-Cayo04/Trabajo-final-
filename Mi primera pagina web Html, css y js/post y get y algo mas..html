@@ -1,0 +1,444 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Primera pagina wed Huellas</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #cfead4;
+        color: #333;
+        text-align: center; /* Centra todo el texto en el body */
+    }
+    
+    h1, h2 {
+        color: #620b39;
+        text-align: center; /* Centra los encabezados */
+    }
+    
+    form {
+        max-width: 600px;
+        margin: 20px auto; 
+        padding: 20px;
+        border: 1px solid #282525;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .content-box {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid #0f8662;  
+        border-radius: 10px;  
+        box-shadow: 0 4px 8px rgba(9, 79, 37, 0.1); 
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        text-align: left; 
+    }
+    
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 5px;
+        background-color: #60dba6;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #07493d;
+    }
+    
+    button.selected {
+        background-color: #188a6a; /* Cambia el color del botón seleccionado */
+        color: white;
+    }
+    h1, h2 {
+        color: #1371a0;
+        text-align: center; /* Centra los encabezados dentro del cuadro */
+    }
+    
+    h5 {
+        color: #095612;
+        text-align: center; /* Alinea los subtítulos a la izquierda */
+    }
+    
+    p {
+        text-align: left; /* Alinea los párrafos a la izquierda */
+        font-size: 16px;
+    }
+    
+    ul {
+        text-align: left;
+        list-style-position: inside; /* Alinea las listas con el texto */
+        font-size: 16px;
+    }
+    
+    #result {
+        max-width: 600px;
+        margin: 20px auto; 
+        padding: 10px;
+        text-align: center; /* Asegura que el texto en el resultado esté centrado */
+        background-color: #c9dfce;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    /* Centrado de las imágenes */
+    img {
+        display: block;
+        margin: 20px auto;
+        max-width: 55%;
+        height: auto;
+        border-radius: 8px; /* Bordes redondeados para las imágenes */
+    }
+     /* Estilos para el botón "Me gusta" */
+     #likeButton {
+        background-color: #a85344;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #likeButton:hover {
+        background-color: #b30036;
+    }
+
+    /* Efecto de animación de "rebote" */
+    .like-animation {
+        animation: bounce 0.3s ease;
+    }
+
+    @keyframes bounce {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    /* Efecto de cambio de color después de dar el "Me gusta" */
+    .liked {
+        background-color: #28a745; /* Cambia el color a verde */
+    }
+
+</style>
+</head> 
+
+<div class="content-box">
+    <h1>Calculadora de Huella de Carbono</h1>
+    <img src="./imgRES.JPG" width="55%" alt="Imagen sobre huella de carbono">
+    
+    <h2>Esta herramienta te ayuda a medir y reducir tu impacto ambiental.</h2>
+    
+    <h4>1.¿Qué es la Huella de Carbono?</h4>
+    <p>La huella de carbono es un indicador ambiental:</p>
+    <ul>
+        <li>El término “Huella de Carbono” hace referencia a la suma de los gases de efecto invernadero que son emitidos a la atmósfera producto de la actividad humana. Estas emisiones pueden ser cuantificadas en diferentes niveles o enfoques, ya sea a nivel país, ciudad, empresa o incluso de manera individual.</li>
+        <li>Se puede distinguir entre huella primaria y huella secundaria:</li>
+        <li>Huella primaria: Son las emisiones directas de CO2 sobre las que se tiene control directo, como las que provienen del combustible empleado en el hogar y el transporte.</li>
+        <li>Huella secundaria: Tiene en cuenta las emisiones indirectas durante todo el ciclo de vida de los productos utilizados, ya sean alimentos o tecnología. Esto incluye la manufactura, el transporte y el descarte de estos productos.</li>
+        <li>Ejemplos de huella secundaria: Desde una búsqueda en Google hasta los procesos industriales de gran escala, todo puede ser evaluado mediante la huella de carbono.</li>
+    </ul>
+    <img src="./contaminacion-digital.jpg" width="55%" alt="Contaminación digital">
+    
+    <h4>-Objetivo de la Calculadora de Huella de Carbono</h4>
+    <p>Una calculadora de huella de carbono ayuda a medir las emisiones de gases que generamos con nuestras actividades diarias. Su objetivo es concienciar sobre el impacto ambiental y ayudar a reducirlo, promoviendo un futuro más sostenible.</p>
+    <img src="./nose.jpg" width="55%" alt="Impacto ambiental">
+
+    <h4>-Actúa hoy para reducir tu huella de carbono:</h4>
+    <ul>
+        <li>Evite el plástico de un solo uso, opte por llevar su propia botella de agua.</li>
+        <li>Haz del baño corto un hábito; 5 minutos son suficientes para una ducha refrescante.</li>
+        <li>Limitar el consumo de productos de origen animal; Explorar opciones vegetales es una gran alternativa.</li>
+        <li>Elige transporte ecológico: bicicleta, autos eléctricos o, mejor aún, caminar.</li>
+        <li>Planta un árbol, un pequeño gesto con un gran impacto.</li>
+    </ul>
+    <img src="./des.jpg" width="55%" alt="Acciones para reducir huella de carbono">
+
+    <h4>-Objetivo del Estudio o Proyecto</h4>
+    <p>El objetivo de este proyecto es ayudar a las personas y organizaciones a medir y reducir su huella de carbono, promoviendo prácticas sostenibles para mitigar el cambio climático.</p>
+    <img src="./ga.jpg" width="55%" alt="Objetivo del proyecto">
+
+    <h4>2.¿Cómo Funciona una Calculadora de Huella de Carbono?</h4>
+    <p>Una calculadora de huella de carbono transforma las actividades diarias, como el consumo de energía, transporte y alimentación, en un valor de emisiones de CO₂e, ayudando a comprender el impacto ambiental.</p>
+    <ul>
+        <li>Para individuos: la calculadora pregunta sobre el uso de energía en el hogar, los hábitos de transporte (frecuencia de viajes, tipo de vehículo), el consumo de alimentos y otros aspectos del estilo de vida.</li>
+    </ul>
+    <img src="./posh.jpg" width="55%" alt="Cómo funciona la calculadora">
+    <h4>-Acciones sostenibles para reducir tu huella de carbono</h4>
+    <p>Hemos recopilado algunas sugerencias sobre cómo puedes reducir tu huella de carbono. ¡Haz click en el botón para obtener una lista!</p>
+    <button onclick="getGiftNames()">Mostrar Acciones</button>
+
+    <ul id="gift_names">
+        <!-- Aquí se mostrará la lista de acciones sostenibles -->
+    </ul>
+
+    <h5>3.Herramientas de Evaluación de Sostenibilidad</h5>
+    <p>Las herramientas de sostenibilidad miden aspectos clave del impacto ambiental, como el uso de energía y los residuos generados. Además de la huella de carbono, estas herramientas ayudan a comprender el impacto total de nuestras acciones sobre el planeta.</p>
+    <img src="./ble.jpg" width="75%" alt="Herramientas de evaluación de sostenibilidad">
+</div>
+
+    <h1>Calculadora de Huella de Carbono</h1>
+
+    <form id="carbonForm">
+        <!-- Datos sobre transporte -->
+        <h3>Datos sobre transporte:</h3>
+        <label for="kilometers">Kilómetros recorridos por semana (en km):</label>
+        <input type="number" id="kilometers" placeholder="Ejemplo: 50" required>
+        <br>
+
+        <!-- Consumo de energía -->
+        <h3>Datos sobre consumo de energía:</h3>
+        <label for="electricity">Consumo mensual de electricidad (en kWh):</label>
+        <input type="number" id="electricity" placeholder="Ejemplo: 100" required>
+        <br>
+
+        <!-- Tipo de dieta -->
+        <h3>Tipo de dieta:</h3>
+        <label>Seleccione su tipo de dieta:</label>
+        <div>
+            <button type="button" class="diet-button" data-factor="2.5">Vegetariana</button>
+            <button type="button" class="diet-button" data-factor="7">Omnívora</button>
+            <button type="button" class="diet-button" data-factor="10">Alta en carne</button>
+            <button type="button" class="diet-button" data-factor="1.5">Vegana</button>
+        </div>
+        <input type="hidden" id="dietFactor" value="0">
+        <br>
+
+        <!-- Uso de dispositivos electrónicos -->
+        <h3>Uso de dispositivos electrónicos:</h3>
+        <label for="devices">Horas diarias usando dispositivos electrónicos:</label>
+        <input type="number" id="devices" placeholder="Ejemplo: 5" required>
+        <br>
+
+        <!-- Huella hídrica -->
+        <h3>Huella hídrica:</h3>
+        <label for="water">Consumo mensual de agua en el hogar (en litros):</label>
+        <input type="number" id="water" placeholder="Ejemplo: 2000" required>
+        <br>
+
+        <!-- Residuos generados -->
+        <h3>Residuos generados:</h3>
+        <label for="waste">Cantidad de residuos generados semanalmente (en kg):</label>
+        <input type="number" id="waste" placeholder="Ejemplo: 5" required>
+        <label>¿Reciclas tus residuos?</label>
+        <div>
+            <button type="button" class="recycle-button" data-recycle="yes">Sí</button>
+            <button type="button" class="recycle-button" data-recycle="no">No</button>
+        </div>
+        <input type="hidden" id="recycle" value="no">
+        <br>
+
+        <!-- Uso de energía renovable -->
+        <h3>Tipo de energía utilizada:</h3>
+        <label>¿Usas energía renovable en tu hogar?</label>
+        <div>
+            <button type="button" class="renewable-button" data-renewable="yes">Sí</button>
+            <button type="button" class="renewable-button" data-renewable="no">No</button>
+        </div>
+        <input type="hidden" id="renewable" value="no">
+        <br>
+
+        <!-- Botón de cálculo -->
+        <h2>Calcula tu Huella de Carbono</h2>
+        <p>Presiona el botón para obtener una estimación de tu huella de carbono en función de los datos ingresados.</p>
+        <button type="button" id="calculateButton">Calcular Huella de Carbono</button>
+    </form>
+
+    <!-- Resultados -->
+    <h2>Resultados:</h2>
+    <div id="result"></div>
+    <button id="likeButton">Me gusta</button>
+    <p id="likesCount">0 Me gusta</p>
+    
+    
+ <!-- EXPOSICION PERSONA 2 -->
+    <script>  document.addEventListener('DOMContentLoaded', () => {
+        const dietButtons = document.querySelectorAll('.diet-button');
+        const recycleButtons = document.querySelectorAll('.recycle-button');
+        const renewableButtons = document.querySelectorAll('.renewable-button');
+        const calculateButton = document.getElementById('calculateButton');
+        const resultDiv = document.getElementById('result');
+    
+        let factors = {}; // Aquí almacenaremos los factores dinámicos
+        let dietFactor = 0;
+        let recycleFactor = 0;
+        let renewableFactor = 0;
+    
+        // Función para obtener los factores dinámicamente usando GET
+        function getFactors() {
+            fetch('/get_factors') 
+                .then(response => response.json())
+                .then(data => {
+                    factors = data; 
+                    console.log('Factores cargados:', factors);
+                })
+                .catch(error => {
+                    console.error('Error al obtener los factores:', error);
+                });
+        }
+    
+        // Llamamos a la función para cargar los factores al inicio
+        getFactors();
+    
+        function handleButtonSelection(buttonGroup, selectedButton) {
+            buttonGroup.forEach(button => button.classList.remove('selected')); // Quita la clase de selección
+            selectedButton.classList.add('selected'); 
+        }
+    
+        dietButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                dietFactor = parseFloat(button.getAttribute('data-factor'));
+                document.getElementById('dietFactor').value = dietFactor;
+                handleButtonSelection(dietButtons, button);
+            });
+        });
+    
+        recycleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                recycleFactor = button.getAttribute('data-recycle') === 'yes' ? -0.5 : 0;
+                document.getElementById('recycle').value = recycleFactor;
+                handleButtonSelection(recycleButtons, button);
+            });
+        });
+    
+        renewableButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                renewableFactor = button.getAttribute('data-renewable') === 'yes' ? -0.5 : 0;
+                document.getElementById('renewable').value = renewableFactor;
+                handleButtonSelection(renewableButtons, button);
+            });
+        });
+    
+        // Calcular huella de carbono
+        calculateButton.addEventListener('click', () => {
+            const kilometers = parseFloat(document.getElementById('kilometers').value) || 0;
+            const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+            const devices = parseFloat(document.getElementById('devices').value) || 0;
+            const water = parseFloat(document.getElementById('water').value) || 0;
+            const waste = parseFloat(document.getElementById('waste').value) || 0;
+    
+            const kilometersFactor = factors.kilometersFactor || 0.21;
+            const electricityFactor = factors.electricityFactor || 0.233;
+            const devicesFactor = factors.devicesFactor || 0.05;
+            const waterFactor = factors.waterFactor || 0.001;
+            const wasteFactor = factors.wasteFactor || 2;
+    
+            const totalCarbon =
+                (kilometers * kilometersFactor * 52) +
+                (electricity * electricityFactor * 12) +
+                (devices * devicesFactor * 365) +
+                (water * waterFactor * 12) +
+                (waste * wasteFactor * 52) +
+                (dietFactor * 52) +
+                recycleFactor +
+                renewableFactor;
+    
+            resultDiv.innerHTML = `Tu huella de carbono estimada es: <strong>${totalCarbon.toFixed(2)} kg de CO<sub>2</sub></strong> al año.`;
+        });
+    });</script>
+    <script>
+        function getGiftNames() {
+            const data = [
+                "Usa transporte sostenible : Opta por caminar, usar bicicleta, transporte público o compartir viajes en auto para reducir emisiones de CO₂.",
+                "Cambia a energía renovable : Contrata un servicio de energía solar o eólica, o instala paneles solares en tu hogar.",
+                "Reduzca el consumo de carne : Adopte una dieta más vegetal, ya que la producción de carne tiene una alta huella de carbono.",
+                "Ahorra electricidad : Apaga luces y dispositivos cuando no los usos, y utiliza focos LED y electrodomésticos eficientes.",
+                "Minimiza el consumo de agua : Instale aireadores de grifos, repare fugas y reutilice agua cuando sea posible.",
+                "Recicla y composta : Separa tus residuos, recicla materiales como vidrio, plástico y metal, y haz composta con los desechos orgánicos.",
+                "Reduzca el uso de dispositivos electrónicos : Limite las horas diarias frente a pantallas y desconecte equipos en modo de espera.",
+                "Participa en programas de compensación de carbono : Planta árboles, apoya proyectos de reforestación o compra de crédito de carbono."
+            ];
+            
+            const giftNamesList = document.getElementById('gift_names');
+            
+            giftNamesList.innerHTML = '';
+            
+            data.forEach(gift => {
+                const li = document.createElement('li');
+                li.textContent = gift;
+                giftNamesList.appendChild(li);
+            });
+        }
+    </script>
+
+
+    <script>
+ document.getElementById('likeButton').addEventListener('click', () => {
+    postLike();
+    addLikeEffect();
+});
+
+function postLike() {
+    fetch('/post_like', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ like: true }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Me gusta registrado:', data);
+        updateLikesCount(data.likes);
+    })
+    .catch(error => {
+        console.error('Error al registrar el me gusta:', error);
+    });
+}
+
+function addLikeEffect() {
+    const likeButton = document.getElementById('likeButton');
+    
+    likeButton.classList.add('like-animation');
+    likeButton.classList.add('liked');
+    
+    setTimeout(() => {
+        likeButton.classList.remove('like-animation');
+    }, 300); 
+}
+
+function updateLikesCount(likes) {
+    document.getElementById('likesCount').textContent = `${likes} Me gusta`;
+}
+const express = require('express');
+const app = express();
+
+let likesCount = 0;
+
+app.use(express.json()); 
+
+app.post('/post_like', (req, res) => {
+    likesCount++;
+
+    res.status(200).json({ message: 'Me gusta registrado', likes: likesCount });
+});
+
+app.listen(3000, () => {
+    console.log('Servidor en http://localhost:3000');
+});
+
+
+    </script>
+</body>
+</html>
